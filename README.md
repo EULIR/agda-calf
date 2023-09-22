@@ -1,3 +1,17 @@
+This is a fork of [calf](https://github.com/jonsterling/agda-calf) for demonstrating our work on [verified cost analysis of joinable red black trees](https://arxiv.org/abs/2309.11056).
+
+# A verified cost analysis of joinable red black trees
+We present our mechanization of correctness and cost verification of joinable red black trees in calf, which is embedded in Agda. 
+
+### Dependency
+To type-check the code, we require Agda version 2.6.3. Moreover, we make use of the latest (unreleased) Agda [standard library](https://github.com/agda/agda-stdlib). The commit hash for the version we have tested with is [here](https://github.com/agda/agda-stdlib/commit/fc473ec905ab1a11a16718a7e8b628f1ab7eb435).
+
+### File location
+- Sequence signature and derived algorithms: [Examples.Sequence](./src/Examples/Sequence.agda) and [Examples.Sequence.MSequence](./src/Examples/Sequence/MSequence.agda)
+- Joinable red black tree implementation and correctness verification: [Examples.Sequence.RedBlackTree](./src/Examples/Sequence/RedBlackTree.agda)
+- Cost verification in section 3: [Examples.Sequence.RedBlackTree](./src/Examples/Sequence/RedBlackTree.agda) and [Examples.Sequence.RedBlackMSequence](./src/Examples/Sequence/RedBlackMSequence.agda)
+- Case studies in section 4: [Examples.Sequence](./src/Examples/Sequence.agda) and [Examples.Sequence.DerivedFormsRBT](./src/Examples/Sequence/DerivedFormsRBT.agda)
+
 # **calf**: A Cost-Aware Logical Framework
 
 The **calf** language is a **c**ost-**a**ware **l**ogical **f**ramework for studying quantitative aspects of functional programs.
